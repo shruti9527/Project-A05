@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "Enter first string"
+read str1
+
+echo "Enter second string"
+read str2
+
+function strCompare {
+
+local $str1=$1
+local $str2=$2
+
+if [ "$str1" == "$str2" ]; then
+echo "Strings are same"
+
+else
+echo "Strings are not same"
+fi
+
+
+}
+
+strCompare str1 str2
