@@ -1,0 +1,22 @@
+#!/bin/bash
+
+str="aba"
+
+myfun() {
+
+local $str=$1
+
+pald=$str|rev
+
+if [ "$str" == "$pald" ];
+then
+echo "Is a palindrome"
+
+else
+echo "Not a palindrome"
+
+fi
+
+}
+
+myfun $str1
