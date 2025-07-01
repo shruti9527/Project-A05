@@ -1,48 +1,26 @@
-import java.util.Scanner;
-
 public class SimpleCalculator {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        double num1 = 20;
+        double num2 = 5;
 
-        System.out.println("Simple Calculator");
-        System.out.print("Enter first number: ");
-        double num1 = scanner.nextDouble();
+        // Addition
+        double sum = num1 + num2;
+        System.out.println("Addition: " + num1 + " + " + num2 + " = " + sum);
 
-        System.out.print("Enter an operator (+, -, *, /): ");
-        char operator = scanner.next().charAt(0);
+        // Subtraction
+        double difference = num1 - num2;
+        System.out.println("Subtraction: " + num1 + " - " + num2 + " = " + difference);
 
-        System.out.print("Enter second number: ");
-        double num2 = scanner.nextDouble();
+        // Multiplication
+        double product = num1 * num2;
+        System.out.println("Multiplication: " + num1 + " * " + num2 + " = " + product);
 
-        double result;
-
-        switch (operator) {
-            case '+':
-                result = num1 + num2;
-                break;
-
-            case '-':
-                result = num1 - num2;
-                break;
-
-            case '*':
-                result = num1 * num2;
-                break;
-
-            case '/':
-                if (num2 != 0) {
-                    result = num1 / num2;
-                } else {
-                    System.out.println("Error: Division by zero is not allowed.");
-                    return;
-                }
-                break;
-
-            default:
-                System.out.println("Error: Invalid operator.");
-                return;
+        // Division
+        if (num2 != 0) {
+            double quotient = num1 / num2;
+            System.out.println("Division: " + num1 + " / " + num2 + " = " + quotient);
+        } else {
+            System.out.println("Division by zero is not allowed.");
         }
-
-        System.out.println("Result: " + result);
     }
 }
