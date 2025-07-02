@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submission Received</title>
+    <script>
+        window.onload = function () {
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById("name").textContent = params.get("name");
+            document.getElementById("email").textContent = params.get("email");
+        };
+    </script>
+</head>
+<body>
+    <h2>Thank you for your submission!</h2>
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+</body>
+</html>
